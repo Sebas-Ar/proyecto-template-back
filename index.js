@@ -13,7 +13,7 @@ const tasksCollectionName = ''
 
 
 // Obtener Todo
-app.get('/', async (req, res) => {
+app.get('/api/v1/tareas', async (req, res) => {
 
     // 1. Conexion a la DB
     await dbClient.connect()
@@ -34,7 +34,7 @@ app.get('/', async (req, res) => {
 })
 
 // Obtener Uno
-app.get('/', async (req, res) => {
+app.get('/api/v1/tareas/:id', async (req, res) => {
 
     // 1. Conexion a la DB
     await dbClient.connect()
